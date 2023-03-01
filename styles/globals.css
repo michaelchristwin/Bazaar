@@ -1,3 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.form {
+  width: 250px !important;
+}
+.search-icon {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}

@@ -1,37 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
+import Image from "next/image";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Home() {
+  const [open, setOpen] = useState<boolean>(false);
   return (
-    <main className="w-full">
-      <div className="pt-5 flex justify-between">
-        <p className="block ml-2 text-blue-700 text-[1.23rem] font-['Helvetica'] font-[700]">
-          BAZAAR
-        </p>
-        <div className="flex">
+    <main className="">
+      <div className="pt-5 d-flex justify-content-between">
+        <p className="d-block ms-2">BAZAAR</p>
+        <div className="d-flex">
           <p>
-            <Person2OutlinedIcon className="mr-4" />
+            <Person2OutlinedIcon className="me-4" />
           </p>
           <p>
             <ShoppingCartOutlinedIcon className="mr-3" />
           </p>
         </div>
       </div>
-      <fieldset className="relative w-full mt-3 flex">
+      <fieldset className="position-relative mt-3 d-flex">
         <input
           type="text"
           name=""
-          className="rounded-[0.7rem] lg:ml-1 block text-black h-10 pl-8 border-2 w-[75%] ml-2"
+          className="form-control form ms-2 text-center"
           id="Search"
           placeholder={`Search`}
         />
-        <SearchOutlinedIcon className="absolute top-2 left-4 lg:left-2" />
-        <button className=" bg-blue-700 text-white px-3 rounded ml-2 hover:bg-blue-600">
-          Search
-        </button>
+        <SearchOutlinedIcon className="search-icon" />
+        <button className="btn btn-primary ms-1">Search</button>
       </fieldset>
+      <button className="btn btn-primary p-2">
+        <Image src={"/menu.png"} width={25} height={20} alt="wi" />
+      </button>
     </main>
   );
 }
