@@ -43,7 +43,11 @@ function Home(): JSX.Element {
         <SearchOutlinedIcon className="search-icon" />
       </fieldset>
       <section className="p-3">
-        <ProductSm img="/iphone.jpeg" name="Phones" />
+        <div className="d-flex">
+          <ProductSm img="/iphone.jpeg" name="Phones" />
+          <ProductSm img="/cloth.jpeg" name="Fashion" />
+          <ProductSm img="/groc.jpeg" name="Groceries" />
+        </div>
       </section>
       <Offcanvas show={open} onHide={handleClose} id="offcanvas">
         <Offcanvas.Header closeButton>

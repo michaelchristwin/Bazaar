@@ -1,11 +1,11 @@
 .form {
-  width: 280px !important;
+  width: 340px !important;
   border-radius: 20px !important;
 }
 .search-icon {
   position: absolute;
   top: 10px;
-  left: 90px;
+  left: 32px;
 }
 .brand {
   font-size: 20px;
