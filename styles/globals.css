@@ -10,6 +10,7 @@
 .brand {
   font-size: 20px;
   font-weight: 600;
+  color: rgba(48, 48, 181, 0.862);
 }
 .menu {
   background-color: rgba(236, 238, 241, 0.882);
@@ -18,5 +19,39 @@
   padding-bottom: 0 !important;
 }
 .offcanvas {
-  width: 200px !important;
+  width: 300px !important;
+  font-family: Helvetica;
+}
+.title {
+  font-size: 17px !important;
+  color: rgba(48, 48, 181, 0.862);
+  font-weight: 600 !important;
+}
+.ul {
+  list-style: none;
+}
+.ul li {
+  margin-top: 15px;
+}
+.ul li:nth-child(1) {
+  margin-top: 0px !important;
+}
+.off-b {
+  padding: 0px !important;
+}
+.prodsm {
+  height: 120px;
+  width: 100px;
+}
+.prod-img {
+  border-radius: 10px !important;
+  height: 90px !important;
+}
+.im-div {
+  background-color: rgb(231, 203, 166);
+  border-radius: 10px;
+  width: 90px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

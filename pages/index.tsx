@@ -5,6 +5,11 @@ import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
+import RateReviewOutlinedIcon from "@mui/icons-material/RateReviewOutlined";
+import LocalActivityOutlinedIcon from "@mui/icons-material/LocalActivityOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ProductSm from "@/components/Productsm";
 
 function Home(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
@@ -14,7 +19,7 @@ function Home(): JSX.Element {
   return (
     <main className="">
       <div className="pt-3 d-flex justify-content-between">
-        <button className="btn menu border ms-2" onClick={handleShow}>
+        <button className="btn menu ms-2" onClick={handleShow}>
           <MenuIcon />
         </button>
         <p className="d-block ms-2 brand">BAZAAR</p>
@@ -23,7 +28,7 @@ function Home(): JSX.Element {
             <Person2OutlinedIcon className="me-4 person" />
           </p>
           <p>
-            <ShoppingCartOutlinedIcon className="mr-3 cart" />
+            <ShoppingCartOutlinedIcon className="me-3 cart" />
           </p>
         </div>
       </div>
@@ -37,13 +42,30 @@ function Home(): JSX.Element {
         />
         <SearchOutlinedIcon className="search-icon" />
       </fieldset>
+      <section className="p-3">
+        <ProductSm img="/iphone.jpeg" name="Phones" />
+      </section>
       <Offcanvas show={open} onHide={handleClose} id="offcanvas">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title className="title">Bazaar Account</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+        <Offcanvas.Body className="off-b">
+          <ul className="ul">
+            <li>
+              <Inventory2OutlinedIcon /> Orders
+            </li>
+            <li>
+              <RateReviewOutlinedIcon /> Pending Review
+            </li>
+            <li>
+              <LocalActivityOutlinedIcon /> Vouchers
+            </li>
+            <li>
+              <FavoriteBorderOutlinedIcon />
+              Saved Items
+            </li>
+          </ul>
+          <p className="text-center">Categories</p>
         </Offcanvas.Body>
       </Offcanvas>
     </main>
