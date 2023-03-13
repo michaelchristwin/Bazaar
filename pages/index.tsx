@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Home() {
   return (
     <main>
@@ -20,24 +22,27 @@ function Home() {
             id="password"
             className="border rounded-[20px] h-[37px] block w-[80vw] px-2"
           />
+          <span className="">Forgot Password</span>
           <button
             type="submit"
             className="px-2 bg-green-600 text-white rounded-[10px] w-20 h-9 mt-5 block mx-auto"
           >
             Signin
-          </button>
+          </button>\
         </form>
       </section>
-      <div className="mt-[60%]">
-        <span className="text-center block">Don`t have an account?</span>
-        <a href="/create-account">
+      <div className="mt-[60%] block">
+        <span className="text-center block text-red-500">
+          Don`t have an account?
+        </span>
+        <Link href="/create-account">
           <button
             type="button"
-            className="border px-2 text-black rounded-[15px] block mx-auto h-8 hover:bg-black hover:text-white hover:border-0"
+            className="border px-2 text-black rounded-[15px] ml-[30%] mx-auto h-8 hover:bg-black hover:text-white hover:border-0"
           >
             Create Account
           </button>
-        </a>
+        </Link>
       </div>
     </main>
   );

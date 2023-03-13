@@ -41,6 +41,12 @@ function CreateAccount() {
             id="confpwd"
             className="border rounded-[20px] h-[37px] block w-[80vw] px-2"
           />
+          <button
+            type="button"
+            className="border px-2 text-white bg-green-600 rounded-[15px] block mx-auto h-8 hover:bg-black hover:text-white hover:border-0 w-28 mt-12"
+          >
+            Sign Up
+          </button>
         </form>
       </section>
     </main>
