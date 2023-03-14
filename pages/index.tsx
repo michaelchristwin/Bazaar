@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Home() {
+function Home(): JSX.Element {
   return (
     <main>
       <section className="block">
@@ -22,13 +22,18 @@ function Home() {
             id="password"
             className="border rounded-[20px] h-[37px] block w-[80vw] px-2"
           />
-          <span className="">Forgot Password</span>
-          <button
-            type="submit"
-            className="px-2 bg-green-600 text-white rounded-[10px] w-20 h-9 mt-5 block mx-auto"
-          >
-            Signin
-          </button>\
+          <span className="text-center block  text-red-500 mt-3">
+            Forgot Password
+          </span>
+          <Link href={"/home"}>
+            <button
+              type="submit"
+              className="px-2 bg-green-600 text-white rounded-[10px] w-20 h-9 mt-5 block mx-auto"
+            >
+              Signin
+            </button>
+          </Link>
+          \
         </form>
       </section>
       <div className="mt-[60%] block">

@@ -1,4 +1,4 @@
-function CreateAccount() {
+function CreateAccount(): JSX.Element {
   return (
     <main>
       <section>
