@@ -1,23 +1,36 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faHouse,
+  faCartShopping,
+  faComment,
+} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 function Home(): JSX.Element {
   return (
-    <main>
-      <nav className="bg-green-600 flex justify-around text-white h-10 align-middle pt-3">
+    <main className=" relative">
+      <nav className="bg-green-600 flex justify-around text-white h-10 align-middle pt-3 fixed w-full bottom-0">
+        <Link href={"/"}>
+          <FontAwesomeIcon icon={faBars} style={{ fontSize: "1rem" }} />
+        </Link>
+        <Link href={"/"}>
+          <FontAwesomeIcon icon={faHouse} style={{ fontSize: "1.3rem" }} />
+        </Link>
         <Link href={"/"}>
           <FontAwesomeIcon
-            icon={faBars}
-            style={{ fontSize: "1rem" }}
-            className=""
+            icon={faCartShopping}
+            style={{ fontSize: "1.3rem" }}
           />
         </Link>
-        <Link href={"/"}>Hello</Link>
-        <Link href={"/"}>World</Link>
-        <Link href={"/"}>Fuck</Link>
-        <Link href={"/"}>JavaScript</Link>
+        <Link href={"/"}>
+          <FontAwesomeIcon icon={faUser} style={{ fontSize: "1.3rem" }} />
+        </Link>
+        <Link href={"/"}>
+          <FontAwesomeIcon icon={faComment} style={{ fontSize: "1.3rem" }} />
+        </Link>
       </nav>
       <div className="relative">
         <input
