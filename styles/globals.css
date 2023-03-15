@@ -11,4 +11,9 @@
   body {
     font-family: Helvetica;
   }
+  .horror {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    bottom: 0px !important;
+  }
 }
