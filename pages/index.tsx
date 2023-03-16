@@ -4,7 +4,7 @@ function Home(): JSX.Element {
   return (
     <main>
       <section className="block">
-        <p className="block text-center header">Welcome To Bazaar</p>
+        <p className="block text-center header">ShowRoom</p>
         <form action="" className="block w-fit mx-auto mt-10">
           <label htmlFor="email" className="mx-auto">
             Email

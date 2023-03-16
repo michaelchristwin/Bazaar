@@ -13,24 +13,32 @@ function Home(): JSX.Element {
   return (
     <main className="h-full min-h-screen">
       <div className="horror">
-        <nav className="bg-green-600 flex justify-around text-white h-10 pt-3 w-full horror">
+        <nav className="bg-green-600 flex justify-around text-white h-14 pt-3 w-full horror">
           <Link href={"/"}>
             <FontAwesomeIcon icon={faBars} style={{ fontSize: "1rem" }} />
           </Link>
-          <Link href={"/"}>
-            <FontAwesomeIcon icon={faHouse} style={{ fontSize: "1.3rem" }} />
+          <Link href={"/"} className="block">
+            {/* <FontAwesomeIcon
+              icon={faHouse}
+              style={{ fontSize: "1rem" }}
+              className="block"
+            /> */}
+            Home
           </Link>
           <Link href={"/"}>
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faCartShopping}
-              style={{ fontSize: "1.3rem" }}
-            />
+              style={{ fontSize: "1rem" }}
+            /> */}
+            Cart
           </Link>
           <Link href={"/"}>
-            <FontAwesomeIcon icon={faUser} style={{ fontSize: "1.3rem" }} />
+            {/* <FontAwesomeIcon icon={faUser} style={{ fontSize: "1rem" }} /> */}
+            Account
           </Link>
           <Link href={"/"}>
-            <FontAwesomeIcon icon={faComment} style={{ fontSize: "1.3rem" }} />
+            {/* <FontAwesomeIcon icon={faComment} style={{ fontSize: "1rem" }} /> */}
+            Help
           </Link>
         </nav>
       </div>
