@@ -1,54 +1,27 @@
-import Link from "next/link";
+import Image from "next/image";
 
-function Home(): JSX.Element {
+function Home() {
   return (
     <main>
-      <section className="block">
-        <p className="block text-center header">ShowRoom</p>
-        <form action="" className="block w-fit mx-auto mt-10">
-          <label htmlFor="email" className="mx-auto">
-            Email
-          </label>
-          <input
-            type="text"
-            id="email"
-            className="border rounded-[20px] h-[37px] block w-[80vw] px-2"
-          />
-          <label htmlFor="password" className="mt-3 block">
-            Password
-          </label>
-          <input
-            type="text"
-            id="password"
-            className="border rounded-[20px] h-[37px] block w-[80vw] px-2"
-          />
-          <span className="text-center block  text-red-500 mt-3">
-            Forgot Password
-          </span>
-          <Link href={"/home"}>
-            <button
-              type="submit"
-              className="px-2 bg-green-600 text-white rounded-[10px] w-20 h-9 mt-5 block mx-auto"
-            >
-              Signin
-            </button>
-          </Link>
-          \
-        </form>
+      <section>
+        <Image
+          src={`/spotlight.png`}
+          width={1000}
+          height={30}
+          alt="banner"
+          className="w-[100vw]"
+        />
+        <aside className="bg-[#fafafa] w-full h-[40px] border-b-[#f2f2f2] border-b">
+          <div className="flex justify-center mx-auto">
+            <button>Sell on AliExpress</button>
+            <button>Help</button>
+            <button>Buyer protection</button>
+          </div>
+        </aside>
       </section>
-      <div className="mt-[60%] block">
-        <span className="text-center block text-red-500">
-          Don`t have an account?
-        </span>
-        <Link href="/create-account">
-          <button
-            type="button"
-            className="border px-2 text-black rounded-[15px] ml-[30%] mx-auto h-8 hover:bg-black hover:text-white hover:border-0"
-          >
-            Create Account
-          </button>
-        </Link>
-      </div>
+      <nav className="w-full">
+        <input type="text" className="w-[150px] h-[20px] border-black border" />
+      </nav>
     </main>
   );
 }
