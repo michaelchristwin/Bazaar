@@ -1,3 +1,4 @@
+import Carousel from "@/components/carousel";
 import Image from "next/image";
 
 function Home() {
@@ -56,7 +57,8 @@ function Home() {
             </ul>
           </aside>
         </div>
-        <div>
+        <Carousel />
+        {/* <div>
           <Image
             src={`/mom.webp`}
             width={690}
@@ -64,7 +66,7 @@ function Home() {
             alt="Mom Deals"
             className="rounded"
           />
-        </div>
+        </div> */}
       </section>
     </main>
   );
