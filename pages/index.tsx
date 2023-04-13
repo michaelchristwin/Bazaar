@@ -1,4 +1,3 @@
-import Carousel from "@/components/carousel";
 import Image from "next/image";
 
 function Home() {
@@ -57,16 +56,26 @@ function Home() {
             </ul>
           </aside>
         </div>
-        <Carousel />
-        {/* <div>
-          <Image
-            src={`/mom.webp`}
-            width={690}
-            height={270}
-            alt="Mom Deals"
-            className="rounded"
-          />
-        </div> */}
+        <div>
+          <div>
+            <Image
+              src={`/mom.webp`}
+              width={690}
+              height={270}
+              alt="Mom Deals"
+              className="rounded"
+            />
+          </div>
+          <div className="mt-3">
+            <Image
+              src={`/bg.png`}
+              width={690}
+              height={200}
+              alt="Background"
+              className="rounded w-[690px] h-[200px]"
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
